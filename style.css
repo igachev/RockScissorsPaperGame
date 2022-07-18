@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #696969;
+}
+
+.first-section .container {
+    display: grid;
+    
+    grid-template-areas:
+    '. . . . . game-name game-name game-name . . . .'
+    '. . . . . rock paper scissors . . . .'
+    '. . . . . counter counter counter . . . .'
+    '. . . . .  you . computer  . . . .'
+    '. . . . . result result result . . . .'
+    '. . . . . scoreboard scoreboard scoreboard . . . .'
+    ;
+    grid-gap: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.game-name {
+    grid-area: game-name;
+    font-size: 23px;
+}
+
+.rock {
+    grid-area: rock;
+}
+
+.paper {
+    grid-area: paper;
+}
+
+.scissors {
+    grid-area: scissors;
+}
+
+.counter {
+    grid-area: counter;
+    color: #B0C4DE;
+   
+}
+.counter p {
+    font-size: 60px;
+}
+
+.you {
+    grid-area: you;
+   transform: translateX(-130%);
+   transition: 0.6s transform linear;
+}
+
+.you.move {
+    transform: translateX(0);
+}
+
+.computer {
+    grid-area: computer;
+    transform: translateX(130%);
+   transition: 0.6s transform linear;
+}
+
+.computer.move2 {
+transform: translateX(0);
+}
+
+.result {
+    grid-area: result;
+}
+
+.scoreboard {
+    grid-area: scoreboard;
+   
+}
+
+.scoreboard h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    box-shadow: 1px 3px 5px 1px black;
+    background-color: #F08080;
+    font-weight: bold;
+}
+
+.scoreboard h4 {
+    font-size: 32px;
+}
+
+.scoreboard p {
+    font-size: 28px;
+}
+
+.scoreboard hr {
+    margin-bottom: 10px;
+    
+}
+
+.scoreboard .points-container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.scoreboard .points-container p:first-child {
+    padding-right: 80px;
+    margin-right: 50px;
+    border-right: 2px solid black;
+}
+
+.scoreboard .points-container p:last-child {
+    padding-left: 5px;
+    margin-left: 50px;
+}
+
+.rock-i{
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.paper-i {
+    cursor: pointer;
+    
+}
+
+.scissors-i {
+    cursor: pointer;
+    
+}
+
+.counter {
+    font-size: 30px;
+}
+
+/* animations */
+.rot {
+    animation-name: rot;
+    animation-duration: 2s;
+
+}
+
+@keyframes rot {
+    
+    50% {transform: rotateY(180deg);}
+   
+    100% {transform: rotateY(0);}
+    
+}
+
+.scale-down-up {
+    animation-name: scale-down-up;
+    animation-duration: 2s;
+}
+
+@keyframes scale-down-up {
+    0% { transform: scale(1) rotate(90deg)}
+      50% {transform: scale(0.5) rotate(90deg);}
+      100% {transform: scale(1) rotate(90deg);}
+}
+
+.scissors-rot {
+    animation-name: scissors-rot;
+    animation-duration: 2s;
+}
+
+@keyframes scissors-rot { 
+    25% {transform: rotate(30deg);}
+    50% {transform: rotate(-30deg);}
+    75% {transform: rotate(30deg);}
+    100% {transform: rotate(0);}
+    
+}

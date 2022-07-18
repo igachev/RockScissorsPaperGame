@@ -1,0 +1,15 @@
+  [
+    {
+        "name":"rock",
+        "iconName":"fa-solid fa-hand-back-fist fa-10x"
+    },
+
+    {
+        "name":"paper",
+        "iconName":"fa-solid fa-hand fa-10x"
+    },
+    {
+        "name":"scissors",
+        "iconName":"fa-solid fa-hand-scissors fa-10x"
+    }
+]
